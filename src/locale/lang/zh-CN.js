@@ -1,0 +1,17 @@
+export default {
+  home: '首页',
+  login: '登录',
+  doc: '学校简介',
+  join_page: '校园新闻',
+  components: '德育之窗',
+  update: '党建之窗',
+  excel: '实小少年',
+  jsfz: '教师发展',
+  tools_methods_page: '教育科研',
+  error_store_page: '平安校园',
+  jxhd: '家校互动',
+  tzgg: '通知公告',
+  cropper_page: '图片裁剪',
+  query: '带参路由',
+  params: '动态路由',
+}
