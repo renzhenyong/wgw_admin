@@ -5,7 +5,7 @@
         <!-- :menu-list="menuList" -->
         <!-- 需要放在菜单上面的内容，如Logo，写在side-menu标签内部，如下 -->
         <div class="logo-con" style="margin-bottom:15px">
-          <img v-show="!collapsed" :src="maxLogo" key="max-logo" style="width:100px;height:100px"/>
+          <img v-show="!collapsed" :src="maxLogo" key="max-logo" />
           <img v-show="collapsed" :src="minLogo" key="min-logo" />
         </div>
               <div @click="intro()" v-if="type==1 || type==3 || access=='bgs_admin'"><i class="ivu-icon ivu-icon-ios-book"></i><span>学校简介</span></div>
