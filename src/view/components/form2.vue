@@ -22,7 +22,7 @@
                      :max-size="2000"
                     :format="['bmp','gif','jpeg','jpg','pic','png','tif','3gp','aac','ac3','aif']"
                     name='file'
-                     action="https://wgw.chxgk.com:9443/upload">                
+                     action="https://10.30.16.189:9443/upload">                
           <Button icon="ios-cloud-upload-outline" >上传图片</Button>
                 </Upload>
                 <div><img :src="formItem.url" style="width:150px;height:100px;border:none"></div>                

@@ -1,5 +1,11 @@
 import axios from '@/libs/api.request'
-
+// 查询所有学校
+export const getschools = () => {
+  return axios.request({
+    url: '/api/schools/schools',
+    method: 'get'
+  })
+}
 // 查询所有
 export const findall = (str,name,page,rows) => {
   return axios.request({

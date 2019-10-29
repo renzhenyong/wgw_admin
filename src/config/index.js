@@ -22,8 +22,8 @@ export default {
     // pro: ''
     // dev: 'http://localhost:9000',
       //dev: 'http://62.234.32.126:9000',
- //dev: 'https://localhost:9443',
-dev: 'https://wgw.chxgk.com:9443',
+ dev: 'https://10.30.16.189:9443',
+//dev: 'https://wgw.chxgk.com:9443',
   //pro: 'https://wgw.chxgk.com:9443',
   // pro: 'https://localhost:443',
     // pro: 'http://localhost:9000/'

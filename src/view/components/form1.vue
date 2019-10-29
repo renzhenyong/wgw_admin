@@ -42,7 +42,7 @@
 <script>
  import UE from '@/components/ue/ue.vue'
 import "../../../public/xiumi-ue-v5.css"
-import "../../../public/xiumi-ue-dialog-v5.js"
+ import  "../../../public/xiumi-ue-dialog-v5.js"
 import Cropper from "@/components/cropper"
 import { uploadImg,saveNewsinfo,selectNewById } from "@/api/data"
 import { mapActions } from 'vuex'

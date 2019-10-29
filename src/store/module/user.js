@@ -75,12 +75,13 @@ export default {
   },
   actions: {
     // 登录
-    handleLogin ({ commit }, { userName, password }) {
+    handleLogin ({ commit }, { userName, password,id }) {
       userName = userName.trim()
       return new Promise((resolve, reject) => {
         login(
           userName,
-          password
+          password,
+          id
         ).then(res => {
 
           if(res.data.code==200){

@@ -30,12 +30,15 @@
 </template>
 
 <script>
+
 import InforCard from '_c/info-card'
 import CountTo from '_c/count-to'
 import { ChartPie, ChartBar } from '_c/charts'
 import Example from './example.vue'
 import { menuList } from "@/api/data";
 import { getNews} from "@/api/data";
+// import "../../../../public/xiumi-ue-v5.css"
+// import "../../../../public/xiumi-ue-dialog-v5.js"
 export default {
   name: 'home',
   components: {
@@ -90,7 +93,7 @@ export default {
 this.getList();
     },
   mounted () {
-this.getNewList();
+ this.getNewList();
 
     //
   }

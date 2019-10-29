@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="ueditor.config.js"></script>
+<script src="ueditor.all.js"></script>
+<script src="xiumi-ue-dialog-v5.js"></script>
+<link rel="stylesheet" href="xiumi-ue-v5.css">
+  </head>
+  <body>
+    <h1>编辑器示例</h1>
+    <div id="content"></div>
+    <script type="application/javascript">
+      let ueditor_config = {
+        serverUrl: "ueditor?_csrf={{ ctx.csrf | safe }}",
+        initialFrameWidth: 700,
+        initialFrameHeight: 320,
+        autoHeightEnabled: false
+      };
+      var ue = UE.getEditor('content',ueditor_config);
+    </script>
+  </body>
+</html>

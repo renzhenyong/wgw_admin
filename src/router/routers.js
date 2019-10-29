@@ -231,7 +231,63 @@ export default [
       }
     ]
   },
-
+  {
+    path: '/join',
+    name: 'join',
+    component: Main,
+    meta: {
+      hideInBread: true
+    },
+    children: [
+      {
+        path: '/news/'+12,
+        name: 'qyyw',
+        meta: {
+          icon: 'md-notifications',
+          title: '行业资讯'
+        },
+        component: () => import('@/view/news/news.vue')
+      }
+    ]
+  },
+  {
+    path: '/join',
+    name: 'join',
+    component: Main,
+    meta: {
+      hideInBread: true
+    },
+    children: [
+      {
+        path: '/news/'+13,
+        name: 'qyhd',
+        meta: {
+          icon: 'md-notifications',
+          title: '服务资讯'
+        },
+        component: () => import('@/view/news/news.vue')
+      }
+    ]
+  },
+  {
+    path: '/join',
+    name: 'join',
+    component: Main,
+    meta: {
+      hideInBread: true
+    },
+    children: [
+      {
+        path: '/news/'+14,
+        name: 'ywhg',
+        meta: {
+          icon: 'md-notifications',
+          title: '要闻回顾'
+        },
+        component: () => import('@/view/news/news.vue')
+      }
+    ]
+  },
   {
     path: '/join',
     name: 'join',

@@ -10,7 +10,7 @@
         </div>
               <div @click="intro()" v-if="type==1 || type==3 || access=='bgs_admin'"><i class="ivu-icon ivu-icon-ios-book"></i><span>学校简介</span></div>
       </side-menu >
-         <side-menu class="menu">
+         <side-menu class="menu" v-if="type!=4">
             <div @click="xyxw()" ><i class="ivu-icon ivu-icon-ios-book"></i><span>校园新闻</span></div>
       </side-menu>
              <side-menu class="menu" v-if="type==1 || type==3 || access=='dyc_admin'">
@@ -42,8 +42,20 @@
             <div @click="sylb()"><i class="ivu-icon ivu-icon-ios-book"></i><span>首页轮播图</span></div>
       </side-menu>
           </side-menu>
-             <side-menu class="menu" v-if="type!=3">
+             <side-menu class="menu" v-if="type!=3&&type!=4">
             <div @click="yhgl()"><i class="ivu-icon ivu-icon-md-grid"></i><span>用户管理</span></div>
+      </side-menu>
+        </side-menu>
+          </side-menu>
+             <side-menu class="menu" v-if="type==4">
+            <div @click="qyyw()"><i class="ivu-icon ivu-icon-md-grid"></i><span>行业资讯</span></div>
+      </side-menu>
+          </side-menu>
+             <side-menu class="menu" v-if="type==4">
+            <div @click="qyhd()"><i class="ivu-icon ivu-icon-md-grid"></i><span>服务资讯</span></div>
+      </side-menu>
+                <side-menu class="menu" v-if="type==4">
+            <div @click="ywhg()"><i class="ivu-icon ivu-icon-md-grid"></i><span>要闻回顾</span></div>
       </side-menu>
     </Sider>
     <Layout>
@@ -77,7 +89,7 @@
         v-model="modalpwd"
         title="修改密码"
         @on-ok="ok"
-        @on-cancel="cancel">
+    >
            <Form :model="formItem" :label-width="60">
         <FormItem label="账号">
             <Input  v-model="formItem.user_name" disabled></Input>
@@ -186,7 +198,6 @@ export default {
     ]),
     ...mapActions([
       'handleLogin',
-      'getUnreadMessageCount',
       'getUserInfo'
     ]),
     turnToPage (route) {
@@ -261,6 +272,15 @@ export default {
         yhgl(){
           this.$router.push({name: "zhanghao"})
     },
+    qyyw(){
+this.$router.push({name: "qyyw"})
+    },
+        qyhd(){
+this.$router.push({name: "qyhd"})
+    },
+    ywhg(){
+this.$router.push({name: "ywhg"})
+    },
     modifypwd(){
       this.modalpwd=true;
     },
@@ -319,8 +339,6 @@ $(".menu").click(function() {
         name: this.$config.homeName
       })
     }
-    // 获取未读消息条数
-    this.getUnreadMessageCount()
   }
 
 }

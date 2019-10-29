@@ -7,7 +7,7 @@ UE.registerUI('dialog', function (editor, uiName) {
         title  : '',
         onclick: function () {
             var dialog = new UE.ui.Dialog({
-                iframeUrl: 'xiumi-ue-dialog-v5.html',
+                iframeUrl: '../xiumi-ue-dialog-v5.html',
                 editor   : editor,
                 name     : 'xiumi-connect',
                 title    : "",

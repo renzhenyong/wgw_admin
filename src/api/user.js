@@ -2,7 +2,7 @@ import axios from '@/libs/api.request'
 
 
 
-export const login = (userName, password) => {
+export const login = (userName, password,id) => {
   // const data = {
   //   userName,
   //   password
@@ -11,7 +11,8 @@ export const login = (userName, password) => {
     url: 'api/user/login',
     params: {
       userName,
-      password
+      password,
+      id
     },
     method: 'post'
   })
@@ -106,12 +107,7 @@ export const saveUserInfo = formData => {
     method: 'post'
   })
 }
-export const getUnreadCount = () => {
-  return axios.request({
-    url: 'message/count',
-    method: 'get'
-  })
-}
+
 
 export const getMessage = () => {
   return axios.request({
@@ -150,12 +146,3 @@ export const removeReaded = msg_id => {
   })
 }
 
-export const restoreTrash = msg_id => {
-  return axios.request({
-    url: 'message/restore',
-    method: 'post',
-    data: {
-      msg_id
-    }
-  })
-}
